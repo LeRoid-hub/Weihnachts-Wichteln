@@ -6,15 +6,16 @@ def swapPositions(list, pos1, pos2):
     return list
 
 
-teilnehmer = ["Jan", "Paul", "Niklas", "Tom", "Timo", "Collin"]
+anzahl = int(input("Anzahl der Teilnehmer: "))
+teilnehmer = []
+
+for i in range(anzahl):
+    teilnehmer.append(input(str(i+1) + ". Name: "))
+
 random.shuffle(teilnehmer)
 
-shuffelt = teilnehmer.copy()
-swapPositions(teilnehmer, 0, 2)
-swapPositions(teilnehmer, 3, 4)
-teilnehmer.reverse()
-
-
-for i in range(len(shuffelt)):
-    print(shuffelt[i], "wichtelt für", teilnehmer[i])
-    open(shuffelt[i] + ".txt", "w").write("Du wichtelst für: " + teilnehmer[i])
+for i in range(len(teilnehmer)):
+    if i == len(teilnehmer) - 1:
+        open(teilnehmer[i] + ".txt", "w").write(teilnehmer[0])
+    else:
+        open(teilnehmer[i] + ".txt", "w").write(teilnehmer[i + 1])
