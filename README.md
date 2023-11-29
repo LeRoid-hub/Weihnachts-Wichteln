@@ -1,3 +1,3 @@
 # Weihnachts-Wichteln
 
-Shuffelt eine 6er Gruppe, sodass sich niemand selbst oder zwei sich gegenseitig haben.
+Shuffelt eine Gruppe beliebiger Größe, und gibt die Zuordnungen als .txt Dateien aus.
